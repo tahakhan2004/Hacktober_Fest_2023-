@@ -1,0 +1,11 @@
+.icons {
+    color: white;
+    transition: 0.4s;
+  }
+  .icons:hover{
+  color: #ff9b02;
+  }
+
+  .links:hover{
+  color: #ff9b02 !important;
+  }
