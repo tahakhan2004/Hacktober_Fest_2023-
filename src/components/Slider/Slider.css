@@ -1,0 +1,99 @@
+.main {
+	width: 100%;
+	height: 100vh;
+  }
+  
+  .imgSlider {
+	width: 98%;
+	height: 100vh;
+	margin-left: auto;
+	margin-right: auto;
+	background-size: 100% 100%;
+	animation: changeImage 8s linear infinite; /* Set animation duration to 8s */
+	/* Add initial animation delay */
+	animation-delay: 0s, 2s, 4s, 6s, 8s;
+	/* Set timing function for animation-delay */
+	animation-timing-function: linear;
+  }
+  
+  @keyframes changeImage {
+	0%, 20% {
+	  background-image: url("https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+	}
+	40%, 60% {
+	  background-image: url("https://media.istockphoto.com/id/1146517111/photo/taj-mahal-mausoleum-in-agra.jpg?s=612x612&w=0&k=20&c=vcIjhwUrNyjoKbGbAQ5sOcEzDUgOfCsm9ySmJ8gNeRk=");
+	}
+	80%, 100% {
+	  background-image: url("https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=M3xwMjA3fDB8MHxleHBsb3JlLWZlZWR8M3x8fGVufDB8fHx8fA%3D%3D&w=1000&q=80");
+
+	}
+  }
+  
+  
+  .butnn {
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+  }
+  
+  .butnn {
+	--primary-color: #111;
+	--hovered-color: #c84747;
+	position: relative;
+	display: flex;
+	font-weight: 600;
+	font-size: 20px;
+	gap: 0.5rem;
+	align-items: center;
+  }
+  
+  .butnn p {
+	margin: 0;
+	position: relative;
+	font-size: 24px;
+	color: var(--primary-color)
+  }
+  
+  .butnn::after {
+	position: absolute;
+	content: "";
+	width: 0;
+	left: 0;
+	bottom: -7px;
+	background: var(--hovered-color);
+	height: 2px;
+	transition: 0.3s ease-out;
+  }
+  
+  .butnn p::before {
+	position: absolute;
+  /*   box-sizing: border-box; */
+	content: "ReadMore";
+	width: 0%;
+	inset: 0;
+	color: var(--hovered-color);
+	overflow: hidden;
+	transition: 0.3s ease-out;
+  }
+  
+  .butnn:hover::after {
+	width: 100%;
+  }
+  
+  .butnn:hover p::before {
+	width: 100%;
+  }
+  
+  .butnn:hover svg {
+	transform: translateX(4px);
+	color: var(--hovered-color)
+  }
+  
+  .butnn svg {
+	color: var(--primary-color);
+	transition: 0.2s;
+	position: relative;
+	width: 15px;
+	transition-delay: 0.2s;
+  }
